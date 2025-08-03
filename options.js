@@ -79,14 +79,14 @@ class OptionsManager {
     this.elements.viewSource.addEventListener("click", (e) => {
       e.preventDefault();
       chrome.tabs.create({
-        url: "https://github.com/your-username/expiring-tabs",
+        url: "https://github.com/chaptersix/expiring-tabs",
       });
     });
 
     this.elements.reportIssue.addEventListener("click", (e) => {
       e.preventDefault();
       chrome.tabs.create({
-        url: "https://github.com/your-username/expiring-tabs/issues",
+        url: "https://github.com/chaptersix/expiring-tabs/issues",
       });
     });
 

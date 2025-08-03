@@ -1,5 +1,7 @@
 # Privacy-Focused Update: Removed All URLs Permission
 
+**Last Updated: August 3, 2025**
+
 ## What Changed
 
 This extension has been updated to **remove the `<all_urls>` host permission** to improve user privacy and security. This means the extension can no longer access the URLs or content of your tabs.
@@ -57,11 +59,13 @@ If you were using domain exclusions in the previous version:
 ## Why This Change?
 
 The `<all_urls>` permission is extremely broad and allows extensions to:
+
 - Read and modify all your web pages
 - Access sensitive information on any website
 - Potentially track your browsing behavior
 
 By removing this permission, the extension is now:
+
 - More privacy-friendly
 - Less likely to be flagged by security tools
 - Compliant with principle of least privilege

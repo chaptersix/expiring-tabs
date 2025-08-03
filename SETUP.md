@@ -5,6 +5,7 @@ This guide will help you install and configure the Expiring Tabs Chrome extensio
 ## Quick Setup (5 minutes)
 
 ### Step 1: Generate Icons
+
 1. Open `create-icons.html` in your web browser
 2. Click "Generate All Icons"
 3. Download each icon (right-click → Save image as):
@@ -14,6 +15,7 @@ This guide will help you install and configure the Expiring Tabs Chrome extensio
    - Save as `icons/icon128.png`
 
 ### Step 2: Install Extension
+
 1. Open Chrome and go to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in top-right)
 3. Click "Load unpacked"
@@ -21,6 +23,7 @@ This guide will help you install and configure the Expiring Tabs Chrome extensio
 5. The extension should now appear in your extensions list
 
 ### Step 3: Configure Settings
+
 1. Click the extension icon in your Chrome toolbar
 2. Toggle "Auto-close tabs" to ON
 3. Set your preferred expiration time (default: 30 minutes)
@@ -29,11 +32,13 @@ This guide will help you install and configure the Expiring Tabs Chrome extensio
 ## Verification
 
 ### Test the Extension
+
 1. Open `verify-installation.js` in Chrome DevTools console
 2. Run the verification script to check all functionality
 3. Should show "PERFECT! Extension is fully functional"
 
 ### Manual Test
+
 1. Open a few test tabs
 2. Wait for the configured time OR click "Clean up now"
 3. Inactive tabs should be closed automatically
@@ -41,17 +46,20 @@ This guide will help you install and configure the Expiring Tabs Chrome extensio
 ## Troubleshooting
 
 ### Extension Not Working?
+
 - ✅ Check it's enabled in `chrome://extensions/`
 - ✅ Verify all 4 icon files exist in `icons/` folder
 - ✅ Run the verification script
 - ✅ Check browser console for errors
 
 ### Icons Missing?
+
 - The extension needs icon16.png, icon32.png, icon48.png, icon128.png
 - Use `create-icons.html` to generate them
 - Save them in the `icons/` folder with exact filenames
 
 ### Tabs Not Closing?
+
 - Make sure "Auto-close tabs" is enabled
 - Check your expiration time isn't too long
 - Pinned tabs are excluded by default
@@ -85,6 +93,7 @@ expiring_tabs/
 ## Battery Optimization
 
 The extension is designed for minimal battery impact:
+
 - Uses Chrome's efficient Alarms API (not timers)
 - Only activates when needed
 - Stores minimal data

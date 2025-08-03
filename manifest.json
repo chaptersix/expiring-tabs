@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Expiring Tabs",
   "version": "1.0.0",
-  "description": "Automatically close tabs after a configured period of inactivity to keep your browser clean and improve performance.",
+  "description": "Automatically close inactive tabs after a configurable time period. Keep your browser clean and boost performance with privacy-first design.",
 
   "permissions": ["tabs", "storage", "alarms", "activeTab"],
 
@@ -28,5 +28,7 @@
     "128": "icons/icon128.png"
   },
 
-  "options_page": "options.html"
+  "options_page": "options.html",
+
+  "homepage_url": "https://github.com/chaptersix/expiring-tabs"
 }

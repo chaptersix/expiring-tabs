@@ -2,7 +2,7 @@
 class TabManager {
   constructor() {
     this.ALARM_NAME = "expiring-tabs-cleanup";
-    this.DEFAULT_EXPIRE_MINUTES = 30;
+    this.DEFAULT_EXPIRE_MINUTES = 240; // 4 hours
     this.DEFAULT_CHECK_INTERVAL = 5; // Check every 5 minutes
 
     console.log("[ExpiringTabs] TabManager initialized");

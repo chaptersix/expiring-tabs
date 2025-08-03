@@ -22,7 +22,7 @@ _Coming soon - extension pending review_
 1. **Download or clone this repository**
 
    ```bash
-   git clone https://github.com/your-username/expiring-tabs.git
+   git clone https://github.com/chaptersix/expiring-tabs.git
    ```
 
 2. **Open Chrome Extensions page**
@@ -86,11 +86,11 @@ _Coming soon - extension pending review_
 
 ## Configuration Options
 
-| Setting             | Description                              | Default    |
-| ------------------- | ---------------------------------------- | ---------- |
-| **Expiration Time** | How long tabs stay open without activity | 30 minutes |
-| **Check Frequency** | How often to scan for expired tabs       | 5 minutes  |
-| **Exclude Pinned**  | Never close pinned tabs                  | Enabled    |
+| Setting             | Description                              | Default   |
+| ------------------- | ---------------------------------------- | --------- |
+| **Expiration Time** | How long tabs stay open without activity | 4 hours   |
+| **Check Frequency** | How often to scan for expired tabs       | 5 minutes |
+| **Exclude Pinned**  | Never close pinned tabs                  | Enabled   |
 
 ## Permissions Explained
 
@@ -185,7 +185,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Changelog
 
-### v1.0.0 (Privacy-Focused Release)
+### v1.0.0 (Privacy-Focused Release) - August 3, 2025
 
 - ✨ Automatic tab expiration with configurable timing
 - 📌 Pinned tab exclusion
