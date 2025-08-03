@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expiring Tabs</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <h1>Expiring Tabs</h1>
+            <div class="status-indicator">
+                <span id="status-dot" class="status-dot enabled"></span>
+                <span id="status-text">Enabled</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="setting-group">
+                <label for="enabled-toggle" class="toggle-label">
+                    <input type="checkbox" id="enabled-toggle" class="toggle-input">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-text">Auto-close tabs</span>
+                </label>
+            </div>
+
+            <div class="setting-group">
+                <label for="expire-time">Close tabs after:</label>
+                <select id="expire-time" class="select-input">
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                    <option value="240">4 hours</option>
+                    <option value="480">8 hours</option>
+                    <option value="1440">24 hours</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="exclude-pinned" class="checkbox-input">
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Don't close pinned tabs</span>
+                </label>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-label">Tracked tabs:</span>
+                    <span id="tab-count" class="stat-value">-</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="cleanup-now" class="btn btn-secondary">Clean up now</button>
+                <button id="open-options" class="btn btn-primary">More settings</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="version">v1.0.0</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

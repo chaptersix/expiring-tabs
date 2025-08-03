@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expiring Tabs - Settings</title>
+        <link rel="stylesheet" href="options.css" />
+    </head>
+    <body>
+        <div class="options-container">
+            <header class="header">
+                <div class="header-content">
+                    <h1>Expiring Tabs Settings</h1>
+                    <p class="subtitle">
+                        Configure automatic tab cleanup to keep your browser
+                        organized
+                    </p>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="settings-grid">
+                    <!-- General Settings -->
+                    <section class="settings-section">
+                        <h2>General Settings</h2>
+
+                        <div class="setting-item">
+                            <div class="setting-header">
+                                <label
+                                    for="enabled-toggle"
+                                    class="setting-label"
+                                    >Enable Expiring Tabs</label
+                                >
+                                <div class="toggle-switch">
+                                    <input
+                                        type="checkbox"
+                                        id="enabled-toggle"
+                                        class="toggle-input"
+                                    />
+                                    <span class="toggle-slider"></span>
+                                </div>
+                            </div>
+                            <p class="setting-description">
+                                Automatically close inactive tabs after the
+                                specified time period
+                            </p>
+                        </div>
+
+                        <div class="setting-item">
+                            <label for="expire-time" class="setting-label"
+                                >Close tabs after</label
+                            >
+                            <div class="input-group">
+                                <select id="expire-time" class="select-input">
+                                    <option value="5">5 minutes</option>
+                                    <option value="10">10 minutes</option>
+                                    <option value="15">15 minutes</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="60">1 hour</option>
+                                    <option value="120">2 hours</option>
+                                    <option value="240">4 hours</option>
+                                    <option value="480">8 hours</option>
+                                    <option value="720">12 hours</option>
+                                    <option value="1440">24 hours</option>
+                                    <option value="2880">2 days</option>
+                                    <option value="10080">1 week</option>
+                                </select>
+                            </div>
+                            <p class="setting-description">
+                                Tabs will be closed if they haven't been active
+                                for this duration
+                            </p>
+                        </div>
+
+                        <div class="setting-item">
+                            <label for="check-interval" class="setting-label"
+                                >Check frequency</label
+                            >
+                            <div class="input-group">
+                                <select
+                                    id="check-interval"
+                                    class="select-input"
+                                >
+                                    <option value="1">Every minute</option>
+                                    <option value="2">Every 2 minutes</option>
+                                    <option value="5">Every 5 minutes</option>
+                                    <option value="10">Every 10 minutes</option>
+                                    <option value="15">Every 15 minutes</option>
+                                    <option value="30">Every 30 minutes</option>
+                                    <option value="60">Every hour</option>
+                                </select>
+                            </div>
+                            <p class="setting-description">
+                                How often to check for expired tabs (lower
+                                values use more battery)
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Exclusion Settings -->
+                    <section class="settings-section">
+                        <h2>Exclusion Rules</h2>
+
+                        <div class="setting-item">
+                            <div class="setting-header">
+                                <label
+                                    for="exclude-pinned"
+                                    class="setting-label"
+                                    >Don't close pinned tabs</label
+                                >
+                                <div class="checkbox-wrapper">
+                                    <input
+                                        type="checkbox"
+                                        id="exclude-pinned"
+                                        class="checkbox-input"
+                                    />
+                                    <span class="checkmark"></span>
+                                </div>
+                            </div>
+                            <p class="setting-description">
+                                Pinned tabs will never be automatically closed
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Statistics -->
+                    <section class="settings-section">
+                        <h2>Statistics</h2>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value" id="tracked-tabs">
+                                    -
+                                </div>
+                                <div class="stat-label">Tracked Tabs</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value" id="closed-today">
+                                    -
+                                </div>
+                                <div class="stat-label">Closed Today</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value" id="total-closed">
+                                    -
+                                </div>
+                                <div class="stat-label">Total Closed</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Actions -->
+                    <section class="settings-section">
+                        <h2>Actions</h2>
+
+                        <div class="action-buttons">
+                            <button id="cleanup-now" class="btn btn-primary">
+                                <span class="btn-icon">🧹</span>
+                                Clean up expired tabs now
+                            </button>
+                            <button id="reset-stats" class="btn btn-secondary">
+                                <span class="btn-icon">📊</span>
+                                Reset statistics
+                            </button>
+                            <button
+                                id="export-settings"
+                                class="btn btn-secondary"
+                            >
+                                <span class="btn-icon">📤</span>
+                                Export settings
+                            </button>
+                            <button
+                                id="import-settings"
+                                class="btn btn-secondary"
+                            >
+                                <span class="btn-icon">📥</span>
+                                Import settings
+                            </button>
+                        </div>
+
+                        <input
+                            type="file"
+                            id="import-file"
+                            accept=".json"
+                            style="display: none"
+                        />
+                    </section>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <p class="footer-text">
+                        Expiring Tabs v1.0.0 - Keep your browser clean and
+                        organized
+                    </p>
+                    <div class="footer-links">
+                        <a href="#" id="view-source" class="footer-link"
+                            >View Source</a
+                        >
+                        <a href="#" id="report-issue" class="footer-link"
+                            >Report Issue</a
+                        >
+                        <a href="#" id="rate-extension" class="footer-link"
+                            >Rate Extension</a
+                        >
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Status Messages -->
+            <div id="status-message" class="status-message hidden">
+                <div class="status-content">
+                    <span class="status-icon"></span>
+                    <span class="status-text"></span>
+                </div>
+            </div>
+        </div>
+
+        <script src="options.js"></script>
+    </body>
+</html>
